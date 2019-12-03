@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* custom */
+.btn {
+    @apply px-16 py-5 mt-16 mb-32 text-lg font-semibold text-white rounded-full shadow-md bg-brandpink;
+}
+
+h1,
+h2,
+h3 {
+    @apply font-display font-bold;
+}
+
+.stat {
+    position: relative;
+    display: inline-block;
+
+    &::before {
+        position: absolute;
+        top: -70px;
+        left: 0;
+
+        display: block;
+    }
+
+    &-communities {
+        &::before {
+            content: url("../images/icon-communities.svg");
+        }
+    }
+    &-messages {
+        &::before {
+            content: url("../images/icon-messages.svg");
+        }
+    }
+}
+
+.attribution {
+    border-top: solid 1px #203338;
+    font-size: 11px;
+    text-align: center;
+    padding: 1.5rem 0%;
+    margin-top: 2.5rem;
+
+    & a {
+        color: #fe52c0;
+    }
+}
